@@ -6,8 +6,8 @@
   "scripts": {
     "start": "babel-node ./server.js",
     "test": "concurrently \"npm run test:integration\" \"npm run test:unit\"",
-    "test:integration": "NODE_ENV=test mocha --opts tests/integration/mocha.opts tests/integration/**/*_spec.js",
-    "test:unit": "NODE_ENV=test mocha --opts tests/unit/mocha.opts tests/unit/**/*_spec.js"
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
+    "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*_spec.js"
   },
   "author": "",
   "license": "ISC",
