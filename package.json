@@ -1,0 +1,28 @@
+{
+  "name": "node-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./server.js",
+    "test": "concurrently \"npm run test:integration\" \"npm run test:unit\"",
+    "test:integration": "NODE_ENV=test mocha --opts tests/integration/mocha.opts tests/integration/**/*_spec.js",
+    "test:unit": "NODE_ENV=test mocha --opts tests/unit/mocha.opts tests/unit/**/*_spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "chai": "^3.5.0",
+    "concurrently": "^3.4.0",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "supertest": "^3.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4"
+  }
+}
